@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,500;0,700;1,500;1,700&display=swap');
+
+
+body {
+  	background-image: repeating-linear-gradient(45deg, rgb(15, 15, 15), rgb(15, 15, 15) 30px, rgb(16, 16, 16) 30px, rgb(16, 16, 16) 60px);
+  	margin: 0vh 0px 0px 0px; 
+}
+
+h1, h2, p, small {
+  	margin: auto;
+  	color: white;
+	font-family: "Source Code Pro";
+	font-weight: 500;
+	transform: skew(-5deg);
+}
+
+sup, sub {
+	line-height: 0px;
+	font-size: 70%;
+}
+
+hr {
+	height: 0px;
+	border: 1px white solid;
+	background-color: white;
+}
+
+.smt {
+	font-size: 75%;
+}
+
+.bgt {
+	font-size: 130%;
+}
+
+.crt {
+  	text-align: center;
+}
+
+.trt {
+	opacity: 0.5;
+	text-shadow: none;
+}
+
+.imt {
+	font-weight: 700;
+}
+
+.glt {
+	text-shadow: 0px 0px 6px;
+}

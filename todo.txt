@@ -1,0 +1,9 @@
+? = Not done.
+! = Done.
+
+Version 0.0.4 [Upgrades]
+Stuff to do for this version:
+    1. Add upgrades (base increase, static generator multipliers, etc.). This unlocks at 1e?? matter.       ?
+    2. Add saving.                                                                                          ?
+    3. Add a way to change the priority for max button (highest/lowest gens).                               ?
+    4. Options tab sub-tabs ("Saving", "QoL").                                                              ?

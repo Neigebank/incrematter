@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Incrematter</title>
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+    </head>
+
+    <body style="min-height: 100vh; overflow-x: hidden;">
+        <div>
+            <div style="position: fixed; bottom: 0.5%; left: 1%">    
+                <p>Version 0.0.3.1</p>
+                <p>"Getting there"</p>
+                <p>October 6th 2022</p>
+            </div>
+            
+            <div style="position: fixed; bottom: 0.5%; right: 1%; text-align: right;">
+                <a href="offsite-links/changelog/changelog.html">Changelog</a>
+                <br>
+                <a href="offsite-links/credits/credits.html">Credits</a>
+                <br>
+                <a href="offsite-links/credits/credits.html">‎</a>
+            </div>
+            
+            <div style="position: fixed; bottom: 1.7%; left: 50%;; text-align: center; transform: translate(-50%, 0%);">
+                <p><span id="whatunlocks">x</span>
+                <br>
+                <span id="unlreq">Requires → x matter.</span></p>
+            </div>
+        </div>
+
+        <span id="progressbar">
+            <p id="progtext" class="crt bgt2 glt">0.00%</p>
+            <div id="currprog"></div>
+        </span>
+
+        <p class="crt bgt">You have <span id="matteramt">0</span> matter.</p>
+        <p class="crt">You are currently gaining <span id="matterpersec">0</span> matter per second.</p>
+        <br>
+
+        <div style="text-align: center">
+            <button class="tabBtn" onclick="changeTab('generators')">Generators</button>
+            <button class="tabBtn" onclick="changeTab('options')">Options</button>
+            <button class="tabBtn" onclick="changeTab('statistics')">Statistics</button>
+        </div>
+
+        <div id="generatorsTab" style="display: revert">
+            <div style="text-align: center;">
+                <button id="maxbtn" style="display:none" onclick="maxnormalgen()">Max all [M]</button>
+            </div>
+
+            <table id="gens">
+                <tr id="gen1">
+                    <td style="width: 35%">1st generator <span id="ng1mu" class="ngenmul">1.00x</span></td>
+                    <td style="width: 40%"><span id="ng1am">0</span> <span id="ng1bg">[0]</span> <span id="ng1pps" class="trt">(+0.00%/s)</span></td>
+                    <td style="width: 25%"><button class="genBtn" id="genBtn1" onclick="buynormalgen(1)"><span id="ng1pr" class="bdt">0</span> matter</button></td>
+                </tr>
+
+                <tr id="gen2">
+                    <td style="width: 35%">2nd generator <span id="ng2mu" class="ngenmul">1.00x</span></td>
+                    <td style="width: 40%"><span id="ng2am">0</span> <span id="ng2bg">[0]</span> <span id="ng2pps" class="trt">(+0.00%/s)</span></td>
+                    <td style="width: 25%"><button class="genBtn" id="genBtn2" onclick="buynormalgen(2)"><span id="ng2pr" class="bdt">0</span> matter</button></td>
+                </tr>
+
+                <tr id="gen3">
+                    <td style="width: 35%">3rd generator <span id="ng3mu" class="ngenmul">1.00x</span></td>
+                    <td style="width: 40%"><span id="ng3am">0</span> <span id="ng3bg">[0]</span> <span id="ng3pps" class="trt">(+0.00%/s)</span></td>
+                    <td style="width: 25%"><button class="genBtn" id="genBtn3" onclick="buynormalgen(3)"><span id="ng3pr" class="bdt">0</span> matter</button></td>
+                </tr>
+
+                <tr id="gen4">
+                    <td style="width: 35%">4th generator <span id="ng4mu" class="ngenmul">1.00x</span></td>
+                    <td style="width: 40%"><span id="ng4am">0</span> <span id="ng4bg">[0]</span></td>
+                    <td style="width: 25%"><button class="genBtn" id="genBtn4" onclick="buynormalgen(4)"><span id="ng4pr" class="bdt">0</span> matter</button></td>
+                </tr>
+            </table>
+            <br>
+
+            <p id="nextgenmatter" class="crt smt">The next generator will show up when you get to x matter.</p>
+            <br>
+            <div id="genboosterdiv" class="crt">
+                <button class="gbstbtn" onclick="genBooster()">Reset progress for a <span id="ratiogenbooster" class="bdt bgt2" >[x]x</span> to all generators.<br><span id="currentgenbooster">[x]</span>x → <span id="pendinggenbooster" class="bdt">[x]</span>x</button>
+            </div>
+        </div>
+
+        <div id="optionsTab" class="crt" style="display: none">
+            <button class="optsaveBtn" onclick="expimp(0)">Export</button> <!-- 0 is exporting -->
+            <button class="optsaveBtn" onclick="expimp(1)">Import</button> <!-- 1 is importing -->
+            <br>
+            <textarea class="textBox" id="importbox">Enter exported save here.</textarea>
+        </div>
+
+        <div id="statisticsTab" style="display: none;">
+            <p class="statstext">Your all time gained matter is <span id="allgainmatter">0</span>.</p>
+            <p class="statstext">The highest amount of matter that you've ever gotten is <span id="highestmatter">10</span>.</p>
+            <p class="statstext">You have spent <span id="spentmatter">10</span> matter.</p>
+            <br>
+            <div id="gbooststats">
+                <p class="statstext">You have gained <span id="gboostmatter">x</span> matter this genboost.</p>
+                <p class="statstext">You have done <span id="genboostamt">x</span> genboosts.</p>
+            </div>
+        </div>
+
+        
+        <script src="js/lib/ExpantaNum.js"></script> <!-- Libraries-->
+        <script src="js/main.js"></script>           <!-- Main scripts-->
+    </body>
+</html>

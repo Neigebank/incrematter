@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,500;0,700;1,500;1,700&display=swap');
+
+:root {
+    --mlpx: 6px;
+    --mrpx: 6px;
+    --mattercol: rgb(169, 175, 255);
+    --gentabcol1: rgb(59, 255, 89);
+    --gentabcol2: rgb(11, 48, 17);
+}
+
+ body {
+    background-image: repeating-linear-gradient(45deg, rgb(15, 15, 15), rgb(15, 15, 15) 30px, rgb(16, 16, 16) 30px, rgb(16, 16, 16) 60px);
+    margin: 0; 
+}
+
+p, a, #gens {
+    font-family: "Source Code Pro";
+}
+
+.tabBtn, .genBtn, .optsaveBtn, .gbstbtn {
+    font-family: "Source Code Pro";
+    cursor: pointer;
+    font-weight: 500;
+    transition-duration: 150ms;
+}
+
+p {
+    font-size: 16px;
+    color: white;
+    margin: auto;
+    transform: skew(-3deg);
+}
+
+a {
+    color: rgb(177, 255, 132);
+    text-decoration: none;
+    transition-duration: 100ms;
+}
+
+a:hover {
+    color: rgb(139, 199, 104)
+}
+
+sup {
+    font-size: 70%;
+    line-height: 0px;
+    vertical-align: super;
+}
+
+sub {
+    font-size: 65%;
+    line-height: 0px;
+}
+
+.crt {
+    text-align: center;
+}
+
+.bgt {
+    font-size: 22px;
+}
+
+.bgt2 {
+    font-size: 18px;
+}
+
+.trt {
+    opacity: 0.5;
+}
+
+.bdt {
+    font-weight: 700;
+}
+
+.itt {
+    transform: skew(-6deg);
+}
+
+.tabBtn {
+    font-size: 24px;
+    color: white;
+    background-color: rgb(51, 51, 51);
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 2px;
+    margin: 0px var(--mrpx) 10px var(--mlpx);
+    padding: 0px 5px 0px 5px;
+}
+
+.tabBtn:hover {
+    color: black;
+    background-color: white;
+}
+
+.genBtn {
+    color: var(--gentabcol1);
+    border-color: var(--gentabcol1);
+    background-color: var(--gentabcol2);
+    font-size: 14px;
+    border: 2px;
+    border-style: solid;
+    width: 100%;
+    height: 28px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    box-shadow: 0px 0px 3px;
+    transform: skew(-5deg);
+}
+
+.genBtn.unbuyable {
+    color: white;
+    border-color: white;
+    background-color: rgb(0, 0, 0);
+}
+
+.genBtn:hover {
+    color: black;
+    border-color: white;    
+    background-color: white;
+}
+
+.ngenmul {
+    font-weight: 700;
+    font-size: 24px;
+    text-shadow: 0px 0px 12px;
+    transform: skew(-5deg);
+    display: inline-block;
+}
+
+.statstext {
+    font-size: 16px;
+    text-align: center;
+}
+
+.optsaveBtn {
+    width: 90px;
+    height: 30px;
+    padding-top: 0px;
+    font-size: 16px;
+    color: white;
+    background: rgb(0, 100, 20);
+    border: 2px solid #46ff03;
+    border-radius: 2px;
+    margin: 0px 4px 15px 4px;   
+    box-shadow: 0px 0px 4px #00ff10;
+}
+
+.optsaveBtn:hover {
+    color: rgb(0, 100, 20);
+    background-color: #46ff03;
+}
+
+.gbstbtn {
+    font-size: 14px;
+    background-color: rgb(11, 48, 17);
+    color: rgb(59, 255, 89);
+    padding: 2px 5px 2px 5px;
+    border: 2px solid rgb(59, 255, 89);
+    transform: skew(-3deg);
+    border-radius: 2px;
+}
+
+.gbstbtn:hover {
+    background-color: rgb(59, 255, 89);
+    color: rgb(0, 51, 8);
+}
+
+.textBox {
+   background-color: rgb(26, 26, 26);
+   border: 2px solid white;
+   border-radius: 2px;
+   color: white;
+   font-family: "Source Code Pro";
+   text-align: center;
+   word-wrap: break-word;
+   resize: none;
+}
+
+#maxbtn {
+    cursor: pointer;
+    font-family: "Source Code Pro";
+    font-size: 14px;
+    background-color: rgb(51, 51, 51);
+    border: 2px white solid;
+    border-radius: 2px;
+    color: white;
+    margin: 2px 0px 2px 0px;
+    width: 110px;
+    height: 25px;
+    transition-duration: 200ms;
+}
+
+#maxbtn:hover {
+    color: black;
+    background-color: white;
+    border-color: white;
+}
+
+#matteramt {
+    font-size: 34px;
+    font-weight: 700;
+    text-shadow: 0px 0px 10px var(--mattercol);
+    color: var(--mattercol)
+}
+
+#gens {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+
+    font-size: 20px;
+    color: white;
+}
+
+#progressbar, #currprog {
+    height: 22px;
+}
+
+#progressbar {
+    left: 1%;
+    width: calc(98% - 4px);
+    position: fixed;
+    bottom: 70px;
+    background-color: rgb(30, 30, 30);
+    border-radius: 0px;
+    border: 2px solid rgb(50, 50, 50);
+    box-shadow: 0px 0px 0px rgb(50, 50, 50);
+}
+
+#currprog {
+    position: absolute;
+    bottom: 0px;
+    z-index: -1;
+    transition-duration: 0.1s;
+    background-color: rgb(50, 50, 50);
+}
+
+#progtext {
+    text-align: center;
+}
+
+#nextunlock {
+    font-size: 16px;
+    color: white;
+    margin: auto;
+    transform: skew(-3deg);
+}
+
+#importbox {
+    width: 300px;
+    height: 60px;
+    font-size: 12px;
+}
